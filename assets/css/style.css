@@ -1,0 +1,72 @@
+body{
+	background-image: url(../images/geometric_wallpaper.jpg)
+}
+
+.game-title {
+	text-orientation: : center;
+	background-color: orange;
+	color: white;
+	height:60px;
+	width:30%;
+
+}
+
+.rules{
+	background-color: beige;
+	color: green;
+	width:50%;
+	padding-bottom: 30px
+	margin-bottom:.5%;
+}
+
+.random-score {
+	
+	/*margin-top: 1%;*/
+	height: 125px;
+	width:25%;
+	float:left;
+	background-color: seagreen;
+	color: maroon;
+}
+
+.win-loss{
+	margin-top: 1%
+	margin-left: 2%;
+	height: 125px;
+	width:15%;
+	float:left;
+	background-color: skyblue;
+	color:black;
+}
+
+.crystal-row {
+	padding-top: .5%;
+	/*margin-top: 1%;*/
+	display: flex;
+  	justify-content: space-between;
+
+	height:60px;
+	width:25%;
+	clear:both;
+	background-image: url(../images/geometric_wallpaper.jpg)
+}
+
+.crystal-button {
+	height:60px;
+	width:60px;
+	background-image: url(../images/crystal-button.jpg);
+
+}
+
+.score-total, .score-display {
+	margin-top: 2%;
+	background-color: teal;
+	color: white;
+	width:25%;
+}
+
+.score-display {
+	margin-top: 1%;
+	height: 80px;	
+
+}

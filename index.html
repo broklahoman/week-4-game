@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href= "assets/css/style.css" >
+	<title>jewel bid game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+</head>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+<script type="text/javascript"></script>
+
+	
+	</style>
+
+	<div class = "game-title">
+	Crystal collector</div>
+
+	<div class = "rules">
+	<p>You will be given a random number to start the game.</p>
+	
+	<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your score.</p>
+
+	<p>You win the game by matching your total score to the random number provided in the teal box below. Be careful to on clicking your crystals. You lose the game if your total goes over the random number provided.</p>
+
+	<p>The value of each crystal is revealed when you click on it. The crystal values and randmom number changes on each new game.</p>
+
+	<p>Have fun clicking!</p>
+	</div>
+	<div class= "random-score" value >Random score</div>
+
+	<div class = "win-loss"> <p>Win </p> <p>loss </p></div>
+	<div class = "crystal-row"> 
+		<!-- <button class= "crystal" id = "crystal-button-1" value =" ">button</button>
+
+		<button class = "crystal" id = "crystal-button-2" value =" ">button</button>
+		<button class= "crystal" id = "crystal-button-3" value =" ">button</button>
+		<button class= "crystal" id = "crystal-button-4" value =" ">button</button> -->
+	</div>
+
+	<div class= "score-total">Your score is:</div>
+	<div class = "score-display">score display</div>
+
+	<script>
+		$(document).ready(function(){
+
+			var winTotal = 0;
+			var lossTotal = 0;
+			// random target score generator
+			var userScore = 0;
+			var randomScore = (Math.floor(Math.random() * (102)) + 19);
+			
+			console.log("Random Score: " + randomScore);
+
+		$(".random-score").append(" " + randomScore);
+		// randomScore.attr('data-value',(Math.floor(Math.random() * (102)) + 19) )
+		// $(".random-score").attr('data-value', randomScore);
+		// jewel value generator	
+
+		// function game start(){
+
+
+		// crystal.val(crystalValueGen)
+		// var crystalValueGen() = Math.floor(Math.random() * 12) +1;
+	
+		// console.log("crystal 1 value :" + crystal1);
+		// $("#crystal-button-1")
+
+		// function crystalValueFunction(){}
+			
+		crystalRow = ['crystal-button-1', 'crystal-button-2','crystal-button-3','crystal-button-4'];
+
+		for (var i = 0; i < crystalRow.length; i++) {
+			var b = $('<button>');
+			var crystalValue = Math.floor(Math.random() * 12) +1;
+			b.addClass('crystal-button')
+			b.attr('data-number', Math.floor(Math.random() * 12) +1);
+			$(".crystal-row").append(b);
+
+		}
+
+		$(".crystal-button").on('click', function(){
+			userScore += $(".crystal-button").attr('data-number');
+
+			$('.score-display').append(userScore);
+		});
+
+
+
+		
+			
+		
+
+// $(selector).attr(attribute,value) where value = crystalValue gen
+
+
+		
+
+
+
+
+		});
+
+	</script>
+
+	
+
+</body>
+</html>
